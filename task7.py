@@ -7,5 +7,5 @@ dotC = int(input('Введите точку C: '))
 partAC = dotC - dotA
 partBC = dotC - dotB
 
-print ('Длина отрезка АС: ' + str(partAC) + '\nДлина отрезка ВС: ' + str(partBC))
-print ('Сумма отрезков AC и BC: ' + str(partAC + partBC))
+print ('Длина отрезка АС: ' + str(abs(partAC)) + '\nДлина отрезка ВС: ' + str(abs(partBC)))
+print ('Сумма отрезков AC и BC: ' + str(abs(partAC) + abs(partBC)))

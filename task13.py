@@ -6,8 +6,19 @@
 
 color = ['зелёный','красный','жёлтый','белый','чёрный']
 name = ['крысы','коровы','тигра','зайца','дракона','змеи','лошади','овцы','обезьяны','курицы','собаки','свиньи']
-year = int(1984)
-for i in range(0,5):
-    for j in range(0,12):
-        print (str(year) + ' ' + color[i] + ' ' + name[j])
-        year += 1
+
+user_year = int(input('Введите интересующий год [1984-2043]: '))
+if user_year > 2043 or user_year < 1984:
+    print ('Не знаю такого года - слишком давно было или будет не скоро')
+    exit(1)
+count_year = int(1984)
+i,j = 0,0
+
+while count_year != 2044:
+    if j > 11: j = 0
+    if count_year == user_year:
+        print(f'Год {count_year} - год {color[i]} {name[j]}')
+        break
+    if count_year % 2 == 1: i += 1
+    if i > 4: i = 0
+    count_year += 1; j += 1
