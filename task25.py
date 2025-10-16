@@ -13,6 +13,7 @@
 # В каждой строчке содержатся различные символы. Шифровать нужно только буквы кириллицы.
 
 f_in = open("message.txt", "tr", encoding="utf-8")
+f_out = open("message_encr.txt", "tw")
 letters_ascii :list = []
 line_cnt :int = 1
 result :str = ''
@@ -30,6 +31,7 @@ for line in f_in:
             result += line[cnt]
         cnt += 1
     line_cnt += 1
-print(result)
+f_out.write(result)
 
+f_out.close()
 f_in.close()
