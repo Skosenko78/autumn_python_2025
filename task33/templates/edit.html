@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit task</title>
+</head>
+<body>
+    <h1>Редактировать задачу</h1>
+    <form method="POST" action="/edit/{{ task_id }}">
+        <div class="actions">
+            <input type="text" name="task" value="{{ task }}">
+            <input type="text" name="descr" value="{{ descr }}">
+            <input type="date" name="sdate" value="{{ sdate }}">
+            <select name="priority">
+                <option value="2" {% if priority == 2 %}selected{% endif %}>Высокий</option>
+                <option value="1" {% if priority == 1 %}selected{% endif %}>Средний</option>
+                <option value="0" {% if priority == 0 %}selected{% endif %}>Низкий</option>
+            </select>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</body>
+</html>

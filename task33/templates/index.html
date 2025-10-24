@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TODO App</title>
+    <style>
+        .high { color: red; }
+        .medium { color: orange; }
+        .low { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Список задач</h1>
+    <ul>
+        {% for task in tasks | sort(attribute='priority', reverse=True) | sort(attribute='complete')  %}
+            <li class="{{ 'high' if task.priority == 2 else 'medium' if task.priority == 1 else 'low' }} {{ 'complete' if task.complete == 1 }}">
+                {% if task.complete %}
+                    <strike>{{ task.task }} ({{ task.descr }})</strike>
+                {% else %}
+                    {{ task.task }} ({{ task.descr }}) Начать: {{ task.sdate }}
+                {% endif %}
+                <div class="actions">
+                    <a href="/complete/{{ task.id }}" class="btn">Complete</a>
+                    <a href="/delete/{{ task.id }}" class="btn">Delete</a>
+                    <a href="/edit/{{ task.id }}" class="btn">Edit</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <form method="POST" action="/add">
+        <input type="text" name="task" placeholder="Добавить задачу">
+        <input type="text" name="descr" placeholder="Описание задачи">
+        <input type="date" name="sdate" placeholder="Дата старта задачи">
+        <select name="priority">
+            <option value="2">Высокий</option>
+            <option value="1">Средний</option>
+            <option value="0">Низкий</option>
+        </select>
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
