@@ -1,0 +1,23 @@
+{    
+    "sites": [
+        {           
+            "url": "site1.local",
+            "client_id_env": "CLIENT_ID_1",   
+            "client_secret_env": "CLIENT_SECRET_1",
+            "mrf": "site_1"
+        },   
+        {
+            "url": "site2.local",  
+            "client_id_env": "CLIENT_ID_2",
+            "client_secret_env": "CLIENT_SECRET_2",
+            "mrf": "site_2"   
+        },
+        {
+            "url": "site3.local",  
+            "client_id_env": "CLIENT_ID_3",
+            "client_secret_env": "CLIENT_SECRET_3",
+            "mrf": "site_3"   
+        }
+        
+    ]
+}

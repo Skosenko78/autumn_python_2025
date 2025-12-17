@@ -1,0 +1,49 @@
+{
+  "entryCount": 17,
+  "data": [
+    {
+      "additionalpkgs": [],
+      "cpuInfo": {
+        "clockSpeed": 4000,
+        "coreCount": 48,
+        "physCount": 2
+      },
+      "description": "",
+      "dpdk": {},
+      "gid": 278,
+      "guid": "278_12",
+      "machineguid": "f668fed7db15",
+      "mainboardSN": "Type2 - Board Serial Number",
+      "memory": 1030199,
+      "milestones": 6,
+      "model": "",
+      "name": "node-06",
+      "needReboot": false,
+      "nodeUUID": "00006522-6522-5678-90AB-CDDEEFAABBCC",
+      "version": "4.2.0",
+      "stackId": 10
+    },
+    {
+      "additionalpkgs": [],
+      "cpuInfo": {
+        "clockSpeed": 4000,
+        "coreCount": 48,
+        "physCount": 2
+      },
+      "description": "",
+      "dpdk": {},
+      "gid": 278,
+      "guid": "278_14",
+      "machineguid": "de7ce77d01ba",
+      "mainboardSN": "A62420000719",
+      "memory": 1031752,
+      "milestones": 8,
+      "model": "",
+      "name": "node-07",
+      "needReboot": false,
+      "nodeUUID": "F2E7347F-0AD7-D647-97BD-E8BE7279B46E",
+      "version": "4.2.0",
+      "stackId": 11
+    }
+  ]
+}
